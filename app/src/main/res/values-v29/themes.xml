@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Platform.V29.Theme.XUnlockTool" parent="Platform.V27.Theme.XUnlockTool">
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+
+    <style name="Platform.Theme.XUnlockTool" parent="Platform.V29.Theme.XUnlockTool" />
+</resources>

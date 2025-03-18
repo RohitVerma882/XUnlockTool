@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.XUnlockTool" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Platform.V24.Theme.XUnlockTool" parent="Base.Theme.XUnlockTool">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowLightStatusBar">?android:isLightTheme</item>
+    </style>
+
+    <style name="Platform.Theme.XUnlockTool" parent="Platform.V24.Theme.XUnlockTool" />
+
+    <style name="Theme.XUnlockTool" parent="Platform.Theme.XUnlockTool" />
+
+    <style name="Base.Theme.XUnlockTool.SplashScreen" parent="Theme.SplashScreen" />
+
+    <style name="Platform.V24.Theme.XUnlockTool.SplashScreen" parent="Base.Theme.XUnlockTool.SplashScreen">
+        <item name="android:windowLightStatusBar">?android:isLightTheme</item>
+    </style>
+
+    <style name="Platform.Theme.XUnlockTool.SplashScreen" parent="Platform.V24.Theme.XUnlockTool.SplashScreen" />
+
+    <style name="Theme.XUnlockTool.SplashScreen" parent="Platform.Theme.XUnlockTool.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_screen</item>
+        <item name="postSplashScreenTheme">@style/Theme.XUnlockTool</item>
+    </style>
+</resources>
