@@ -3,6 +3,6 @@
 A tool for unlocking the bootloader of Xiaomi devices.
 
 ## Todo
-- Improve Readme
-- Implement fastboot
+- Improve Readme & documentation
+- Unlock automation & fastboot protocol
 - More...
