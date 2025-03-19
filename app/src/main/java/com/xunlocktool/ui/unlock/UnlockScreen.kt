@@ -217,6 +217,7 @@ fun UnlockScreen(viewModel: UnlockViewModel, onLoggedOut: () -> Unit) {
                         onDismissRequest = { expandedRegion = false }) {
                         regions.forEachIndexed { index, region ->
                             DropdownMenuItem(
+                                enabled = !unlockState.isRunning,
                                 contentPadding = ExposedDropdownMenuDefaults.ItemContentPadding,
                                 text = { Text(region, style = MaterialTheme.typography.bodyLarge) },
                                 onClick = {
@@ -231,6 +232,7 @@ fun UnlockScreen(viewModel: UnlockViewModel, onLoggedOut: () -> Unit) {
 
                 TextField(
                     modifier = Modifier.fillMaxWidth(),
+                    enabled = !unlockState.isRunning,
                     value = product,
                     onValueChange = { product = it },
                     singleLine = true,
@@ -242,6 +244,7 @@ fun UnlockScreen(viewModel: UnlockViewModel, onLoggedOut: () -> Unit) {
 
                 TextField(
                     modifier = Modifier.fillMaxWidth(),
+                    enabled = !unlockState.isRunning,
                     value = token,
                     onValueChange = { token = it },
                     maxLines = 4,
