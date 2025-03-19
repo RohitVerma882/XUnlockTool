@@ -103,9 +103,9 @@ class UnlockRequest private constructor(
 
     @Throws(UnlockException::class, IOException::class)
     fun addNonce() {
-        val body = nonceV2(auth, host)
+        val json = nonceV2(auth, host)
         try {
-            val jsonObject = JSONObject(body)
+            val jsonObject = JSONObject(json)
             val code = jsonObject.getInt("code")
             if (code != 0) {
                 throw UnlockException("Response code of nonce request is not zero: $code")

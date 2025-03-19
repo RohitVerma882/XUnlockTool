@@ -9,7 +9,7 @@ import org.json.JSONObject
 object UnlockUtilities {
     fun getMeaning(code: Int, jsonObject: JSONObject): String {
         val meaning = Constants.meanings.find { it.code == code }
-        if (meaning == null) return "Unknown error: $code"
+        if (meaning == null) return "Unknown"
         if (code == 20036) {
             val hours = try {
                 jsonObject.getJSONObject("data").getInt("waitHour")

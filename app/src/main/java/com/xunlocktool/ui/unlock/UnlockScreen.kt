@@ -77,7 +77,7 @@ fun UnlockScreen(viewModel: UnlockViewModel, onLoggedOut: () -> Unit) {
     val hosts = Constants.regions.map { it.host }
     var expandedRegion by remember { mutableStateOf(false) }
     var selectedRegion by rememberSaveable { mutableStateOf(regions[0]) }
-    var selectedHost by rememberSaveable { mutableStateOf(hosts[0]) }
+    var host by rememberSaveable { mutableStateOf(hosts[0]) }
     var product by rememberSaveable { mutableStateOf("") }
     var token by rememberSaveable { mutableStateOf("") }
 
@@ -115,6 +115,7 @@ fun UnlockScreen(viewModel: UnlockViewModel, onLoggedOut: () -> Unit) {
                             fontWeight = FontWeight.SemiBold
                         )
                     },
+
                     navigationIcon = {
                         IconButton(
                             enabled = !unlockState.isRunning,
@@ -126,6 +127,7 @@ fun UnlockScreen(viewModel: UnlockViewModel, onLoggedOut: () -> Unit) {
                             )
                         }
                     },
+
                     actions = {
                         IconButton(
                             enabled = product.isNotEmpty() && token.isNotEmpty(),
@@ -135,7 +137,7 @@ fun UnlockScreen(viewModel: UnlockViewModel, onLoggedOut: () -> Unit) {
                                 } else {
                                     viewModel.startUnlock(
                                         loginState.auth,
-                                        selectedHost,
+                                        host,
                                         product,
                                         token
                                     )
@@ -209,6 +211,7 @@ fun UnlockScreen(viewModel: UnlockViewModel, onLoggedOut: () -> Unit) {
                         trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expandedRegion) },
                         colors = ExposedDropdownMenuDefaults.textFieldColors()
                     )
+
                     ExposedDropdownMenu(
                         expanded = expandedRegion,
                         onDismissRequest = { expandedRegion = false }) {
@@ -218,7 +221,7 @@ fun UnlockScreen(viewModel: UnlockViewModel, onLoggedOut: () -> Unit) {
                                 text = { Text(region, style = MaterialTheme.typography.bodyLarge) },
                                 onClick = {
                                     selectedRegion = region
-                                    selectedHost = hosts[index]
+                                    host = hosts[index]
                                     expandedRegion = false
                                 }
                             )

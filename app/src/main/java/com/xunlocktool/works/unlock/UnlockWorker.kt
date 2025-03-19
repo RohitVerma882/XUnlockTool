@@ -140,7 +140,7 @@ class UnlockWorker(appContext: Context, workerParams: WorkerParameters) :
                 val json = UnlockRequest.ahaUnlock(auth, host, product, token)
                 val jsonObject = JSONObject(json)
                 val code = jsonObject.getInt("code")
-                val description = jsonObject.optString("descEN", "Empty")
+                val description = jsonObject.optString("descEN", "Unknown")
                 @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
                 unlockToken = jsonObject.optString("encryptData", null)
 
