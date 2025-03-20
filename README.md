@@ -1,6 +1,6 @@
 # XUnlockTool
 
-A tool for unlocking the bootloader of Xiaomi devices.
+A Tool for unlocking the bootloader of Xiaomi devices.
 
 ## Todo
 - Improve Readme & documentation

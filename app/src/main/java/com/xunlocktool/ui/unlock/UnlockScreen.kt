@@ -85,7 +85,7 @@ fun UnlockScreen(viewModel: UnlockViewModel, onLoggedOut: () -> Unit) {
     val loginState by viewModel.loginState.collectAsStateWithLifecycle()
     val unlockState by viewModel.unlockState.collectAsStateWithLifecycle()
 
-    LaunchedEffect(loginState.isLoggedIn) {
+    LaunchedEffect(loginState) {
         if (!loginState.isLoggedIn) {
             currentOnLoggedOut()
         }
