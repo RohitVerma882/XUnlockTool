@@ -13,7 +13,7 @@ val Context.authDataStore: DataStore<Auth> by dataStore(
     serializer = AuthSerializer
 )
 
-class AuthDataSource(context: Context) {
+class AuthDataStore(context: Context) {
     private val dataStore: DataStore<Auth> = context.authDataStore
 
     suspend fun saveAuth(userId: String, passToken: String, deviceId: String) {

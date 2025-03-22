@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
             XUnlockToolTheme {
                 val viewModel = viewModel<UnlockViewModel>(
                     factory = UnlockViewModelFactory(
-                        appContainer.authDataSource,
+                        appContainer.authDataStore,
                         appContainer.workManager
                     )
                 )

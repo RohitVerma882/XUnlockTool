@@ -11,7 +11,7 @@ import androidx.work.WorkManager
 import androidx.work.workDataOf
 
 import com.xunlocktool.data.auth.Auth
-import com.xunlocktool.data.auth.AuthDataSource
+import com.xunlocktool.data.auth.AuthDataStore
 import com.xunlocktool.ui.login.LoginState
 import com.xunlocktool.works.unlock.UnlockWorker
 
@@ -27,11 +27,11 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalCoroutinesApi::class)
 class UnlockViewModel(
-    private val authDataSource: AuthDataSource,
+    private val authDataStore: AuthDataStore,
     private val workManager: WorkManager
 ) : ViewModel() {
     val loginState: StateFlow<LoginState> = combine(
-        authDataSource.auth, authDataSource.isLoggedIn
+        authDataStore.auth, authDataStore.isLoggedIn
     ) { auth, isLoggedIn ->
         LoginState(auth, isLoggedIn)
     }.stateIn(
@@ -45,13 +45,13 @@ class UnlockViewModel(
 
     fun saveAuth(userId: String, passToken: String, deviceId: String) {
         viewModelScope.launch {
-            authDataSource.saveAuth(userId, passToken, deviceId)
+            authDataStore.saveAuth(userId, passToken, deviceId)
         }
     }
 
     fun clearAuth() {
         viewModelScope.launch {
-            authDataSource.clearAuth()
+            authDataStore.clearAuth()
         }
     }
 
