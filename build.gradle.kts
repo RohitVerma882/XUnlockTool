@@ -4,3 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.compose) apply false
     alias(libs.plugins.kotlin.serialization) apply false
 }
+
+tasks.register("clean", Delete::class.java) {
+    delete(rootProject.layout.buildDirectory)
+}

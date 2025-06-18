@@ -122,7 +122,7 @@ fun UnlockScreen(viewModel: UnlockViewModel, onLoggedOut: () -> Unit) {
                             onClick = viewModel::clearAuth
                         ) {
                             Icon(
-                                painter = painterResource(R.drawable.ic_logout_24dp),
+                                painter = painterResource(R.drawable.ic_logout),
                                 contentDescription = null
                             )
                         }
@@ -156,7 +156,7 @@ fun UnlockScreen(viewModel: UnlockViewModel, onLoggedOut: () -> Unit) {
                             }
                         }) {
                             Icon(
-                                painter = painterResource(R.drawable.ic_content_copy_24dp),
+                                painter = painterResource(R.drawable.ic_content_copy),
                                 contentDescription = null
                             )
                         }

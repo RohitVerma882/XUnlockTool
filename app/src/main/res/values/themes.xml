@@ -13,16 +13,16 @@
 
     <style name="Theme.XUnlockTool" parent="Platform.Theme.XUnlockTool" />
 
-    <style name="Base.Theme.XUnlockTool.SplashScreen" parent="Theme.SplashScreen" />
+    <style name="Base.Theme.XUnlockTool.Splash" parent="Theme.SplashScreen" />
 
-    <style name="Platform.V24.Theme.XUnlockTool.SplashScreen" parent="Base.Theme.XUnlockTool.SplashScreen">
+    <style name="Platform.V24.Theme.XUnlockTool.Splash" parent="Base.Theme.XUnlockTool.Splash">
         <item name="android:windowLightStatusBar">?android:isLightTheme</item>
     </style>
 
-    <style name="Platform.Theme.XUnlockTool.SplashScreen" parent="Platform.V24.Theme.XUnlockTool.SplashScreen" />
+    <style name="Platform.Theme.XUnlockTool.Splash" parent="Platform.V24.Theme.XUnlockTool.Splash" />
 
-    <style name="Theme.XUnlockTool.SplashScreen" parent="Platform.Theme.XUnlockTool.SplashScreen">
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_screen</item>
+    <style name="Theme.XUnlockTool.Splash" parent="Platform.Theme.XUnlockTool.Splash">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_splash</item>
         <item name="postSplashScreenTheme">@style/Theme.XUnlockTool</item>
     </style>
 </resources>

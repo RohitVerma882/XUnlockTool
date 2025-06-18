@@ -9,9 +9,9 @@
 
     <style name="Platform.Theme.XUnlockTool" parent="Platform.V27.Theme.XUnlockTool" />
 
-    <style name="Platform.V27.Theme.XUnlockTool.SplashScreen" parent="Platform.V24.Theme.XUnlockTool.SplashScreen">
+    <style name="Platform.V27.Theme.XUnlockTool.Splash" parent="Platform.V24.Theme.XUnlockTool.Splash">
         <item name="android:windowLightNavigationBar">?android:isLightTheme</item>
     </style>
 
-    <style name="Platform.Theme.XUnlockTool.SplashScreen" parent="Platform.V27.Theme.XUnlockTool.SplashScreen" />
+    <style name="Platform.Theme.XUnlockTool.Splash" parent="Platform.V27.Theme.XUnlockTool.Splash" />
 </resources>
