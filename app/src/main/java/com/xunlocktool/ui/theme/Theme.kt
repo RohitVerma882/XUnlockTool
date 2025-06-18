@@ -94,8 +94,8 @@ fun XUnlockToolTheme(
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
-    val xUnlockToolColorScheme = when {
-        dynamicColor && supportsDynamicTheming() -> {
+    val colorScheme = when {
+        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
             val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
@@ -105,11 +105,8 @@ fun XUnlockToolTheme(
     }
 
     MaterialTheme(
-        colorScheme = xUnlockToolColorScheme,
-        typography = xUnlockToolTypography,
+        colorScheme = colorScheme,
+        typography = typography,
         content = content
     )
 }
-
-@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.S)
-fun supportsDynamicTheming() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S

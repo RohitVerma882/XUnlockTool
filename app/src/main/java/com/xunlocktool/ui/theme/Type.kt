@@ -15,21 +15,21 @@ val provider = GoogleFont.Provider(
 
 val bodyFontFamily = FontFamily(
     Font(
-        googleFont = GoogleFont("Open Sans"),
+        googleFont = GoogleFont("Source Code Pro"),
         fontProvider = provider,
     )
 )
 
 val displayFontFamily = FontFamily(
     Font(
-        googleFont = GoogleFont("Open Sans"),
+        googleFont = GoogleFont("Source Code Pro"),
         fontProvider = provider,
     )
 )
 
 val baseline = Typography()
 
-val xUnlockToolTypography = Typography(
+val typography = Typography(
     displayLarge = baseline.displayLarge.copy(fontFamily = displayFontFamily),
     displayMedium = baseline.displayMedium.copy(fontFamily = displayFontFamily),
     displaySmall = baseline.displaySmall.copy(fontFamily = displayFontFamily),
