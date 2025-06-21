@@ -32,7 +32,6 @@ android {
 
     buildFeatures {
         compose = true
-        buildConfig = true
     }
 
     compileOptions {
@@ -69,26 +68,21 @@ dependencies {
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.googlefonts)
+    implementation(libs.androidx.navigation.compose)
 
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.androidx.lifecycle.viewModel.compose)
 
-    implementation(libs.androidx.navigation.compose)
-
     implementation(libs.androidx.webkit)
-
     implementation(libs.androidx.datastore.preferences.core)
     implementation(libs.androidx.datastore.preferences)
-
-    implementation(libs.androidx.work.runtime.ktx)
 
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.kotlinx.serialization.json)
 
     implementation(libs.commons.codec)
-
     implementation(platform(libs.okhttp.bom))
     implementation(libs.okhttp)
 }

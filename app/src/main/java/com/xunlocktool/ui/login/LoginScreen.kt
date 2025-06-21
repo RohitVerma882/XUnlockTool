@@ -31,7 +31,6 @@ import androidx.webkit.WebViewClientCompat
 
 import com.xunlocktool.Constants
 import com.xunlocktool.ui.unlock.UnlockViewModel
-import com.xunlocktool.works.unlock.UnlockWorker
 
 @SuppressLint("SetJavaScriptEnabled")
 @Composable
@@ -109,11 +108,11 @@ fun LoginScreen(viewModel: UnlockViewModel, onLoggedIn: () -> Unit) {
                                     val name = parts[0].trim()
                                     val value = parts[1].trim()
 
-                                    if (UnlockWorker.KEY_PASS_TOKEN == name) {
+                                    if ("passToken" == name) {
                                         passToken = value
-                                    } else if (UnlockWorker.KEY_USER_ID == name) {
+                                    } else if ("userId" == name) {
                                         userId = value
-                                    } else if (UnlockWorker.KEY_DEVICE_ID == name) {
+                                    } else if ("deviceId" == name) {
                                         deviceId = value
                                     }
 

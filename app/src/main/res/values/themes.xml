@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Base.Theme.XUnlockTool" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Base.Theme.XUT" parent="android:Theme.Material.Light.NoActionBar" />
 
-    <style name="Platform.V24.Theme.XUnlockTool" parent="Base.Theme.XUnlockTool">
+    <style name="Platform.V24.Theme.XUT" parent="Base.Theme.XUT">
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/black</item>
         <item name="android:windowLightStatusBar">?android:isLightTheme</item>
     </style>
 
-    <style name="Platform.Theme.XUnlockTool" parent="Platform.V24.Theme.XUnlockTool" />
+    <style name="Platform.Theme.XUT" parent="Platform.V24.Theme.XUT" />
 
-    <style name="Theme.XUnlockTool" parent="Platform.Theme.XUnlockTool" />
+    <style name="Theme.XUT" parent="Platform.Theme.XUT" />
 
-    <style name="Base.Theme.XUnlockTool.Splash" parent="Theme.SplashScreen" />
+    <style name="Base.Theme.XUT.Splash" parent="Theme.SplashScreen" />
 
-    <style name="Platform.V24.Theme.XUnlockTool.Splash" parent="Base.Theme.XUnlockTool.Splash">
+    <style name="Platform.V24.Theme.XUT.Splash" parent="Base.Theme.XUT.Splash">
         <item name="android:windowLightStatusBar">?android:isLightTheme</item>
     </style>
 
-    <style name="Platform.Theme.XUnlockTool.Splash" parent="Platform.V24.Theme.XUnlockTool.Splash" />
+    <style name="Platform.Theme.XUT.Splash" parent="Platform.V24.Theme.XUT.Splash" />
 
-    <style name="Theme.XUnlockTool.Splash" parent="Platform.Theme.XUnlockTool.Splash">
+    <style name="Theme.XUT.Splash" parent="Platform.Theme.XUT.Splash">
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_splash</item>
-        <item name="postSplashScreenTheme">@style/Theme.XUnlockTool</item>
+        <item name="postSplashScreenTheme">@style/Theme.XUT</item>
     </style>
 </resources>

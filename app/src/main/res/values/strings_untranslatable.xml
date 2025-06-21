@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">XUnlockTool</string>
-    <string name="app_name_small" translatable="false">XUT</string>
+    <string name="app_name" translatable="false">XUT</string>
 </resources>

@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "XUnlockTool"
+rootProject.name = "XUT"
 include(":app")
