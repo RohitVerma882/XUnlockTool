@@ -1,4 +1,4 @@
-# XUnlockTool
+# XUT
 
 A Tool for unlocking the bootloader of Xiaomi devices.
 

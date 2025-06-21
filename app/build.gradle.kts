@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace = "com.xunlocktool"
+    namespace = "com.xut"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "dev.rohitverma882.xunlocktool"
+        applicationId = "dev.rohitverma882.xut"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -68,7 +68,6 @@ dependencies {
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.googlefonts)
-    implementation(libs.androidx.navigation.compose)
 
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.runtime.compose)
